@@ -3,18 +3,18 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class transaction extends Model {
+  class Transaction extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Transaction.hasMany(models.TypeMobil, {
-        foreignKey: 'transactionId'
-      });
-    }
-  }
+      // Transaction.hasMany(models.TypeMobil, {
+      //   foreignKey: 'transactionId'
+      // });
+    };
+  };
   Transaction.init({
     id: {
       type : DataTypes.INTEGER,
@@ -29,5 +29,5 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'transaction',
   });
-  return transaction;
+  return Transaction;
 };

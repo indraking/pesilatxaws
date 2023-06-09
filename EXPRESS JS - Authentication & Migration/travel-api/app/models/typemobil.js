@@ -3,19 +3,19 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class typeMobil extends Model {
+  class TypeMobil extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      TypeMobil.belongsTo(models.Transaction, {
-        foreignKey: 'transactionId'
-      });
+      // TypeMobil.belongsTo(models.Transaction, {
+      //   foreignKey: 'transactionId'
+      // });
     }
   }
-  typeMobil.init({
+  TypeMobil.init({
     id: {
       type : DataTypes.INTEGER,
       primaryKey: true
@@ -29,5 +29,5 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'typeMobil',
   });
-  return typeMobil;
+  return TypeMobil;
 };
