@@ -1,1 +1,0 @@
-# pesilat-alkademia
